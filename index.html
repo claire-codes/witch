@@ -7,14 +7,20 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
         <script type="text/mustache" id="what-template">
           <h1>What project did I use that in?</h1>
-          
+          <ul>
+            {{#each repos}}
+                <li>
+                    <strong>{{@key}}</strong>: {{this}}
+                </li>
+            {{/each}}
+          </ul>
         </script>
 
-        <link href='https://fonts.googleapis.com/css?family=Sanchez' rel='stylesheet' type='text/css'>
-
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/styles.css">
         <script src="node_modules/jquery/dist/jquery.js"></script>
         <script src="node_modules/underscore/underscore.js"></script>
         <script src="node_modules/backbone/backbone.js"></script>

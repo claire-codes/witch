@@ -1,0 +1,7 @@
+{
+	"repos": {
+		"clairex": ["es6", "chaining", "module", "javascript"],
+		"generator-clekyll": ["yeoman", "clairex"],
+		"left-weeks": ["backbone", "mocha", "localstorage"]
+	}
+}
