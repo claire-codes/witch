@@ -1,10 +1,10 @@
 var app = app || {};
 
 (function($) {
-    'use strict';
+    "use strict";
 
     app.whatView = Backbone.View.extend({
-        el: '#whatView',
+        el: "#whatView",
 
         template: Handlebars.compile($("#what-template").html()),
 
@@ -17,8 +17,7 @@ var app = app || {};
                 success: function() {
                     self.render();
                 },
-                error: function() {
-                }
+                error: function() {}
             });
         },
 

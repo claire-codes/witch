@@ -1,13 +1,13 @@
 var app = app || {};
 
 (function($) {
-    'use strict';
+    "use strict";
 
     app.whatModel = Backbone.Model.extend({
-          defaults: {
-              repos: {}
-          },
+        defaults: {
+            repos: {}
+        },
 
-          url: "data/repos.json"
+        url: "data/repos.json"
     });
 })(jQuery);

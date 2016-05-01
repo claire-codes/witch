@@ -1,0 +1,39 @@
+{
+    "env": {
+        "browser": true
+    },
+    "globals": {
+      "Backbone": false,
+      "$": false,
+      "jQuery": false,
+      "it": false,
+      "expect": false,
+      "describe": false,
+      "beforeEach": false,
+      "afterEach": false,
+      "app": false,
+      "Handlebars": false,
+      "jasmine": false,
+      "_": false,
+      "spyOn":false
+    },
+    "extends": "eslint:recommended",
+    "rules": {
+        "indent": [
+            "error",
+            4
+        ],
+        "linebreak-style": [
+            "error",
+            "unix"
+        ],
+        "quotes": [
+            "error",
+            "double"
+        ],
+        "semi": [
+            "error",
+            "always"
+        ]
+    }
+}
