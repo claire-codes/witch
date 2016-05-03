@@ -3,7 +3,7 @@ var app = app || {};
 (function($) {
     "use strict";
 
-    app.whatModel = Backbone.Model.extend({
+    app.whichModel = Backbone.Model.extend({
         defaults: {
             repos: {}
         },
