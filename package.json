@@ -1,7 +1,7 @@
 {
-  "name": "what",
+  "name": "which",
   "version": "0.0.1",
-  "description": "What project did I use x in?",
+  "description": "Which project did I use x in?",
   "main": "app.js",
   "scripts": {
     "test": "mocha-phantomjs mochaTest/testRunner.html",
