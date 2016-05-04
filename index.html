@@ -11,10 +11,10 @@
 
         <script type="text/mustache" id="which-template">
           <h1>Which project did I use that in?</h1>
-          <ul>
+          <ul id="repo-list">
             {{#each repos}}
                 <li>
-                    <strong>{{@key}}</strong>: {{this}}
+                    <strong>{{@key}}</strong>: <span class="tech">{{this}}</span>
                 </li>
             {{/each}}
           </ul>
@@ -29,12 +29,13 @@
         <script src="js/whichModel.js"></script>
         <script src="js/whichView.js"></script>
         <script src="js/whichIndex.js"></script>
-        <script src="js/whichFilter.js"></script>
     </head>
     <body>
         <div>
             Search: <input type="text" id="filter-box" autofocus />
         </div>
         <div id="whichView"></div>
+
+        <script src="js/whichFilter.js"></script>
     </body>
 </html>
