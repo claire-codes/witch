@@ -23,6 +23,7 @@ var app = app || {};
 
         render: function() {
             var html = this.template(this.model.toJSON());
+            app.WhichFilter.init();
             this.$el.html(html);
         }
     });

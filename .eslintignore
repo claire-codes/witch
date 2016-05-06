@@ -1,4 +1,4 @@
 node_modules/*
 mochaTest/lib/*
 jasmineSpec/lib/*
-app.js
+whichApp.js
