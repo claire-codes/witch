@@ -14,7 +14,7 @@
           <ul id="repo-list">
             {{#each repos}}
                 <li>
-                    <strong>{{@key}}</strong>: <span class="tech">{{this}}</span>
+                    <strong>{{@key}}</strong>: <span class="tech">{{#each this}}{{this}}{{#unless @last}}, {{/unless}}{{/each}}</span>
                 </li>
             {{/each}}
           </ul>

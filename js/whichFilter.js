@@ -5,13 +5,13 @@ var app = app || {};
 
     app.WhichFilter = {
         init: function(inputSelector, listItemsSelector) {
-            var $filterBox = document.querySelector(inputSelector);
+            var $inputBox = document.querySelector(inputSelector);
             var filterTerm,
                 i;
-            $filterBox.addEventListener("keyup", function() {
+            $inputBox.addEventListener("keyup", function() {
                 var $listItems = document.querySelectorAll(listItemsSelector);
-                if ($filterBox.value.length > 2) {
-                    filterTerm = $filterBox.value;
+                if ($inputBox.value.length > 2) {
+                    filterTerm = $inputBox.value;
                     for (i = 0; i < $listItems.length; i++) {
                         if (($listItems[i].innerHTML).match(filterTerm)) {
                             $listItems[i].style.display = "list-item";
