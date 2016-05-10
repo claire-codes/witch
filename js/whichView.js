@@ -15,6 +15,7 @@ var app = app || {};
             var self = this;
             this.model.fetch({
                 success: function() {
+                    self.model.getUniqueTech();
                     self.render();
                 },
                 error: function() {}
