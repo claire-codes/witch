@@ -19,7 +19,7 @@
             {{/each}}
           </ul>
           <div>
-          {{uniqueTech}}
+          Full list of stuff used across all your repos: {{#each uniqueTech}}{{this}}{{#unless @last}}, {{/unless}}{{/each}}
           </div>
         </script>
 

@@ -12,20 +12,21 @@ var app = app || {};
         url: "data/repos.json",
 
         getUniqueTech: function() {
-            if ($.isEmptyObject(this.repos)) {
-                this.uniqueTech = [];
+            if ($.isEmptyObject(this.get("repos"))) {
+                this.set("uniqueTech",[]);
             } else {
                 var objProps = [],
                     dupProps = [];
-                $.each(this.repos, function(ind, elm) {
+                $.each(this.get("repos"), function(ind, elm) {
                     objProps.push(elm);
                 });
                 dupProps = $.map(objProps, function(n) {
                     return n;
                 });
-                this.uniqueTech = dupProps.filter(function(value, index, self) {
+                var tmp = dupProps.filter(function(value, index, self) {
                     return self.indexOf(value) === index;
                 });
+                this.set("uniqueTech",tmp);
             }
         }
     });
