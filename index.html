@@ -7,10 +7,14 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+        <link href="css/normalize.css" rel="stylesheet" />
+        <link href="css/skeleton.css" rel="stylesheet" />
 
         <script type="text/mustache" id="which-template">
           <h1>Which project did I use that in?</h1>
+          <div>
+              Search: <input type="text" id="filter-box" autofocus />
+          </div>
           <ul id="repo-list">
             {{#each repos}}
                 <li>
@@ -35,9 +39,8 @@
         <script src="js/whichIndex.js"></script>
     </head>
     <body>
-        <div>
-            Search: <input type="text" id="filter-box" autofocus />
+        <div class="which-wrapper">
+            <div id="whichView" class="which-view"></div>
         </div>
-        <div id="whichView"></div>
     </body>
 </html>
