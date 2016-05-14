@@ -24,8 +24,8 @@ var app = app || {};
 
         render: function() {
             var html = this.template(this.model.toJSON());
-            app.WhichFilter.init("#filter-box","#repo-list li");
             this.$el.html(html);
+            app.WhichFilter.init("#filter-box","#repo-list li");
         }
     });
 })(jQuery);
