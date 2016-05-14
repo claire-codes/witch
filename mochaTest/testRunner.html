@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script type="text/mustache" id="weeks-template">
+      <h1>Left Weeks</h1>
+      <p>You have {{ leftWeeks }} left!</p>
+      <p id="current-age-text">You are currently {{ currentAge }}</p>
+      <p><input type="text" id="currentAge" /><button type="button" id="changeAge">Change Age</button></p>
+      <div id="weeks-container"></div>
+    </script>
+    
+    <title>Mocha Tests</title>
+    <link rel="stylesheet" href="../node_modules/mocha/mocha.css">
+  </head>
+  <body>
+    <div id="mocha"></div>
+
+    <!-- Testing libraries -->
+    <script src="../node_modules/mocha/mocha.js"></script>
+    <script src="../node_modules/chai/chai.js"></script>
+    <script src="lib/sinon.js"></script>
+
+    <script>
+      mocha.setup('bdd')
+      var expect = chai.expect;
+    </script>
+
+    <!-- Other libraries -->
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../node_modules/underscore/underscore.js"></script>
+    <script src="../node_modules/backbone/backbone.js"></script>
+    <script type="text/javascript" src="../node_modules/backbone.localstorage/backbone.localStorage.js"></script>
+    <script src="../node_modules/handlebars/dist/handlebars.js"></script>
+
+    <!-- Source files -->
+    <script src="../js/whichModel.js"></script>
+    <!-- <script src="../js/whichView.js"></script> -->
+
+    <!-- Test files -->
+    <script src="modelTest.js"></script>
+    <!-- <script src="viewTest.js"></script> -->
+
+    <script>
+      mocha.run();
+    </script>
+  </body>
+</html>
