@@ -1,12 +1,21 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <script type="text/mustache" id="weeks-template">
-      <h1>Left Weeks</h1>
-      <p>You have {{ leftWeeks }} left!</p>
-      <p id="current-age-text">You are currently {{ currentAge }}</p>
-      <p><input type="text" id="currentAge" /><button type="button" id="changeAge">Change Age</button></p>
-      <div id="weeks-container"></div>
+    <script type="text/mustache" id="which-template">
+    <h1>Which project did I use that in?</h1>
+    <div>
+        Search: <input type="text" id="filter-box" autofocus />
+    </div>
+    <ul id="repo-list">
+      {{#each repos}}
+          <li>
+              <strong>{{@key}}</strong>: <span class="tech">{{#each this}}{{this}}{{#unless @last}}, {{/unless}}{{/each}}</span>
+          </li>
+      {{/each}}
+    </ul>
+    <div>
+    Full list of stuff used across all your repos: {{#each uniqueTech}}{{this}}{{#unless @last}}, {{/unless}}{{/each}}
+    </div>
     </script>
     
     <title>Mocha Tests</title>
@@ -33,12 +42,13 @@
     <script src="../node_modules/handlebars/dist/handlebars.js"></script>
 
     <!-- Source files -->
+    <script src="../js/whichFilter.js"></script>
     <script src="../js/whichModel.js"></script>
-    <!-- <script src="../js/whichView.js"></script> -->
+    <script src="../js/whichView.js"></script>
 
     <!-- Test files -->
     <script src="modelTest.js"></script>
-    <!-- <script src="viewTest.js"></script> -->
+    <script src="viewTest.js"></script>
 
     <script>
       mocha.run();
