@@ -13,20 +13,19 @@ var app = app || {};
 
         getUniqueTech: function() {
             if ($.isEmptyObject(this.get("repos"))) {
-                this.set("uniqueTech",[]);
+                this.set("uniqueTech", []);
             } else {
-                var objProps = [],
-                    dupProps = [];
-                $.each(this.get("repos"), function(ind, elm) {
-                    objProps.push(elm);
+                var allFlatProps = [],
+                    uniProps = [];
+                $.each(this.get("repos"), function(ind, repoArr) {
+                    $.map(repoArr, function(elm) {
+                        allFlatProps.push(elm);
+                    });
                 });
-                dupProps = $.map(objProps, function(n) {
-                    return n;
-                });
-                var tmp = dupProps.filter(function(value, index, self) {
+                uniProps = allFlatProps.filter(function(value, index, self) {
                     return self.indexOf(value) === index;
                 });
-                this.set("uniqueTech",tmp);
+                this.set("uniqueTech", uniProps);
             }
         }
     });
